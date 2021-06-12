@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Group Shortcuts",
+  "version": "0.1",
+  "description": "Adds various keyboard shortcuts for better tab group control",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "shortcut_listener.js"
+  },
+  "commands": {
+    "new-tab-in-current-group": {
+      "description": "Open new tab in current tab group",
+      "suggested_key": {
+        "default": "Ctrl+Shift+T",
+        "mac": "Ctrl+T"
+      }
+    },
+    "new-group-for-current-tab": {
+      "description": "Create new group for current tab",
+      "suggested_key": {
+        "default": "Ctrl+Shift+G",
+        "mac": "Ctrl+G"
+      }
+    }
+  }
+}
