@@ -26,15 +26,25 @@ chrome.commands.onCommand.addListener(function(command) {
       chrome.tabs.query({
         highlighted: true,
         currentWindow: true
-      }, function(currentTabs) {
+      }, function(highlightedTabs) {
         chrome.tabs.group({
-          tabIds: currentTabs.map((t) => { return t.id })
+          tabIds: highlightedTabs.map((t) => { return t.id })
         });
+      });
+      break;
+
+    // Remove currently selected tab(s) from their respective group(s)
+    case "ungroup-selected-tabs":
+      chrome.tabs.query({
+        highlighted: true,
+        currentWindow: true
+      }, function(highlightedTabs) {
+        chrome.tabs.ungroup(highlightedTabs.map((t) => { return t.id }));
       });
       break;
 
     // Try getting here
     default:
-      console.error("No can do.")
+      console.error("No can do. Command not found.");
   }
 });

@@ -14,15 +14,22 @@
     "new-tab-in-current-group": {
       "description": "Open new tab in current tab group",
       "suggested_key": {
-        "default": "Ctrl+Shift+T",
+        "default": "Ctrl+T",
         "mac": "Ctrl+T"
       }
     },
     "new-group-for-selected-tabs": {
       "description": "Create new group for currently selected tab(s)",
       "suggested_key": {
-        "default": "Ctrl+Shift+G",
+        "default": "Ctrl+G",
         "mac": "Ctrl+G"
+      }
+    },
+    "ungroup-selected-tabs": {
+      "description": "Remove currently selected tab(s) from their group(s)",
+      "suggested_key": {
+        "default": "Ctrl+Shift+G",
+        "mac": "Ctrl+Shift+G"
       }
     }
   }
