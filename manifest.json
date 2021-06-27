@@ -18,8 +18,8 @@
         "mac": "Ctrl+T"
       }
     },
-    "new-group-for-current-tab": {
-      "description": "Create new group for current tab",
+    "new-group-for-selected-tabs": {
+      "description": "Create new group for currently selected tab(s)",
       "suggested_key": {
         "default": "Ctrl+Shift+G",
         "mac": "Ctrl+G"

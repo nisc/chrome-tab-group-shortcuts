@@ -21,15 +21,14 @@ chrome.commands.onCommand.addListener(function(command) {
       });
       break;
 
-    // Create new group for current tab
-    case "new-group-for-current-tab":
+    // Create new group for currently selected tab(s)
+    case "new-group-for-selected-tabs":
       chrome.tabs.query({
-        active: true,
+        highlighted: true,
         currentWindow: true
       }, function(currentTabs) {
-        var currentTab = currentTabs[0];
         chrome.tabs.group({
-          tabIds: currentTab.id
+          tabIds: currentTabs.map((t) => { return t.id })
         });
       });
       break;
